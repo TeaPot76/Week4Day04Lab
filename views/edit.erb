@@ -1,0 +1,24 @@
+
+ <form method="post" action="/students/<%=@student.id%>" >
+  <label for="first-name">First Name:</label>
+  <input type="text" name="first_name" id="first-name"
+  value= "<%= @student.first_name%>"/>
+
+  <label for="second-name">Second Name:</label>
+  <input type="text" name="second_name" id="second-name"
+  value= "<%= @student.second_name%>"/>
+
+  <label for="age">Age:</label>
+  <input type="number" name="age" id="age"
+  value= "<%= @student.age%>"/>
+
+  <label for="house">House</label>
+  <select name="house" id="house-selection">
+    <option value="Gryffindor"<%= "selected" if @student.house == "Gryffindor" %>>Gryffindor</option>
+    <option value="Ravenclaw"<%= "selected" if @student.house == "Ravenclaw" %>>Ravenclaw</option>
+    <option value="Slytherin"<%= "selected" if @student.house == "Slytherin" %>>Slytherin</option>
+    <option value="Hufflepuff"<%= "selected" if @student.house == "Hufflepuff" %>>Hufflepuff</option>
+ </select>
+
+  <input type="submit" value="Submit changes">
+</form>

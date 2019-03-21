@@ -1,0 +1,12 @@
+
+<h1>All Students in Hogwart </h1>
+<% @students.each do |student|%>
+
+<p>First name: <%= student.first_name%></p>
+<p>Second name: <%= student.second_name%></p>
+<p>House: <%= student.house_name%></p>
+<p>Age: <%= student.age%></p>
+<p><a href = "/students/<%=student.id%>">Show Student details</a></p>
+
+
+<% end %>
